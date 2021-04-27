@@ -1,4 +1,4 @@
-let numberMap = new Map([
+var numberMap = new Map([
     [0, "Zero"],
     [1, "One"],
     [2, "Two"],
@@ -10,3 +10,10 @@ let numberMap = new Map([
     [8, "Eight"],
     [9, "Nine"]
 ]);
+
+var args = process.argv.slice(2), len = args.length, i;
+
+for (i = 0; i < len; i++){
+    var currNum = args[i];
+    console.log(currNum);
+}
