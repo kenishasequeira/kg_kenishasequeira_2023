@@ -1,4 +1,4 @@
-var numberMap = new Map([
+var numberMap = new Map([ //HashMap storing text value for digits
     [0, "Zero"],
     [1, "One"],
     [2, "Two"],
@@ -11,9 +11,14 @@ var numberMap = new Map([
     [9, "Nine"]
 ]);
 
-var args = process.argv.slice(2), len = args.length, i;
+var args = process.argv.slice(2); //gets command line args & ignores fist 2 args - node, main.js
+var argsLen = args.length, i, currNum, currDigit; //"argsLen" stores number of args
 
-for (i = 0; i < len; i++){
-    var currNum = args[i];
-    console.log(currNum);
+for (i = 0; i < argsLen; i++){
+    currNum = args[i]; //arg we're working with currently
+    while (currNum != 0) {
+        currDigit = currNum % 10; //stores digit in the ones place
+        currNum = Math.floor(currNum / 10); //removes the ones place digit
+        // console.log("currNum: ", currNum, "currDig: ", currDigit);
+    }
 }
